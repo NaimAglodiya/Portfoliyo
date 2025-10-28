@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aglodiya Naim — Portfolio</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner container">
+      <div class="brand">
+        <h1 class="name">Aglodiya <span class="accent">Naim</span></h1>
+        <p class="sub">Web Developer — Ahmedabad</p>
+      </div>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#resume">Resume</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero / About -->
+    <section id="about" class="panel about-panel container reveal">
+      <div class="about-grid">
+        <div class="card glass profile-card">
+          <img class="profile-pic" src="https://via.placeholder.com/240" alt="Aglodiya Naim — profile photo" />
+        </div>
+
+        <div class="card glass about-card">
+          <h2>About Me</h2>
+          <p>
+            Hi — I’m <strong>Aglodiya Naim</strong>, a web developer focused on building fast,
+            responsive, and delightful web experiences. I enjoy exploring modern front-end
+            techniques and crafting interfaces that feel polished.
+          </p>
+
+          <div class="social-links">
+            <a href="https://github.com/yourusername" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://twitter.com/yourhandle" target="_blank" rel="noopener">Twitter</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resume -->
+    <section id="resume" class="panel resume-panel container reveal">
+      <div class="card glass resume-card">
+        <div class="resume-header">
+          <h2>Resume</h2>
+          <a class="download-btn" href="resume.pdf" download>Download Resume</a>
+        </div>
+
+        <div class="resume-content">
+          <h3>Experience</h3>
+          <ul>
+            <li><strong>No Experience</strong> — Actively learning and building personal projects.</li>
+          </ul>
+
+          <h3>Education</h3>
+          <ul>
+            <li><strong>Skill BCA-IT</strong> — Silver Oak University (1st Year)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="panel contact-panel container reveal">
+      <div class="card glass contact-card">
+        <h2>Contact Me</h2>
+
+        <form id="contact-form" novalidate>
+          <div class="field">
+            <input id="name" name="name" type="text" required />
+            <label for="name">Name</label>
+          </div>
+
+          <div class="field">
+            <input id="email" name="email" type="email" required />
+            <label for="email">Email</label>
+          </div>
+
+          <div class="field">
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <label for="message">Message</label>
+          </div>
+
+          <div class="form-actions">
+            <button class="btn primary" type="submit">Send Message</button>
+            <p id="form-status" class="form-status" aria-live="polite"></p>
+          </div>
+        </form>
+
+        <p class="note">No backend yet — this form shows a demo success message in the browser.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> By Naim | Built with 💻 & ❤</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
