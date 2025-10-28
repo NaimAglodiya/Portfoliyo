@@ -360,6 +360,7 @@ body{
 
 /* Footer */
 .site-footer{
+  margin-top:-5px;
   padding:1.1rem 0;
   text-align:center;
   color:var(--muted);
