@@ -35,6 +35,10 @@ document.getElementById('year').textContent = new Date().getFullYear();
 
   form.addEventListener('submit', function (e) {
     e.preventDefault();
+    
+    // DEMO ONLY: This function provides client-side validation.
+    // It does not actually send an email. You need a backend service for that.
+
     const name = document.getElementById('name').value.trim();
     const email = document.getElementById('email').value.trim();
     const message = document.getElementById('message').value.trim();
