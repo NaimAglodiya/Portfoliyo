@@ -1,9 +1,6 @@
-// Smooth small utilities + interactions for the portfolio
-
-// Update copyright year
 document.getElementById('year').textContent = new Date().getFullYear();
 
-// Reveal on scroll using IntersectionObserver
+
 (function setupRevealOnScroll(){
   const reveals = document.querySelectorAll('.reveal');
   if (!('IntersectionObserver' in window)) {
@@ -23,7 +20,7 @@ document.getElementById('year').textContent = new Date().getFullYear();
   reveals.forEach(r => io.observe(r));
 })();
 
-// Contact form behavior (client-only demo)
+
 (function(){
   emailjs.init("ZFHQsdQ_0wjxiPi8e");
 })();

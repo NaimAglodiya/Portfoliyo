@@ -1,4 +1,3 @@
-/* ---------- Variables & Reset ---------- */
 :root{
   --bg-1: #0f1724;
   --bg-2: #081223;
@@ -29,14 +28,12 @@ body{
   padding-bottom:5px;
 }
 
-/* Container */
 .container{
   width:90%;
   max-width:var(--container-max);
   margin:0 auto;
 }
 
-/* Section Title (Used for Projects) */
 .section-title {
   margin-bottom: 1.5rem;
   text-align: center;
@@ -48,7 +45,6 @@ body{
   font-weight:700;
 }
 
-/* ---------- Header ---------- */
 .site-header{
   position:sticky;
   top:0;
@@ -82,7 +78,6 @@ body{
 
 .sub{font-size:0.78rem;color:var(--muted)}
 
-/* Navigation */
 .main-nav ul{
   display:flex;
   list-style:none;
@@ -104,7 +99,6 @@ body{
   box-shadow: 0 6px 18px rgba(123,108,255,0.12);
 }
 
-/* ---------- Panels / Cards ---------- */
 .panel{
   padding:3rem 0;
 }
@@ -119,14 +113,12 @@ body{
   box-shadow: 0 12px 40px rgba(2,6,23,0.8); 
 }
 
-/* Glass effect */
 .glass{
   background: linear-gradient(135deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
   border: 1px solid rgba(255,255,255,0.04);
   backdrop-filter: blur(8px) saturate(120%);
 }
 
-/* About layout */
 .about-grid{
   display:grid;
   grid-template-columns: 260px 1fr;
@@ -142,11 +134,9 @@ body{
   border: 1px solid rgba(255,255,255,0.03);
 }
 
-/* About text */
 .about-card h2{ margin-bottom:0.6rem; color:var(--text) }
 .about-card p{ color:var(--muted); line-height:1.6; margin-bottom:0.8rem }
 
-/* --- Tech Stack (in About card) --- */
 .tech-stack {
   margin-top: 1.2rem;
   margin-bottom: 1.2rem;
@@ -186,28 +176,27 @@ body{
 .social-links a:hover{ transform: translateY(-4px); }
 
 
-/* --- Projects Section --- */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1.4rem;
 }
 .project-card {
-  padding: 0; /* Remove default card padding */
+  padding: 0; 
   display: flex;
   flex-direction: column;
-  overflow: hidden; /* To contain the image */
+  overflow: hidden; 
 }
 .project-image {
   width: 100%;
-  height: 180px; /* Fixed height for uniformity */
+  height: 180px; 
   object-fit: cover;
   display: block;
   border-bottom: 1px solid rgba(255,255,255,0.04);
 }
 .project-content {
-  padding: 1.2rem; /* Add padding back to content area */
-  flex-grow: 1; /* Make content fill remaining space */
+  padding: 1.2rem; 
+  flex-grow: 1; 
   display: flex;
   flex-direction: column;
 }
@@ -219,7 +208,7 @@ body{
   color: var(--muted);
   font-size: 0.9rem;
   line-height: 1.6;
-  flex-grow: 1; /* Pushes links to the bottom */
+  flex-grow: 1; 
   margin-bottom: 1rem;
 }
 .project-tags {
@@ -231,7 +220,7 @@ body{
 .project-links {
   display: flex;
   gap: 0.8rem;
-  margin-top: auto; /* Pushes links to the bottom */
+  margin-top: auto; 
 }
 .btn-link {
   color: var(--accent-1);
@@ -256,7 +245,7 @@ body{
 }
 
 
-/* Resume */
+
 .resume-header{
   display:flex;
   justify-content:space-between;
@@ -285,7 +274,7 @@ body{
 }
 .download-btn:hover{ transform: translateY(-3px); }
 
-/* Contact Form — floating labels */
+
 .field{
   position:relative;
   margin-top:1rem;
@@ -317,7 +306,7 @@ body{
   transform-origin:left top;
   transition: transform 180ms var(--ease), top 180ms var(--ease), font-size 180ms var(--ease), color 180ms var(--ease);
 }
-/* Floating label logic */
+
 .field input:focus + label,
 .field input:not(:placeholder-shown) + label,
 .field textarea:focus + label,
@@ -328,7 +317,7 @@ body{
   font-weight:700;
 }
 
-/* Buttons */
+
 .btn{
   display:inline-flex;
   align-items:center;
@@ -346,7 +335,7 @@ body{
   box-shadow: 0 10px 30px rgba(0,224,199,0.06);
 }
 
-/* form status */
+
 .form-actions {
   display: flex;
   align-items: center;
@@ -358,7 +347,7 @@ body{
   color:var(--muted);
 }
 
-/* Footer */
+
 .site-footer{
   margin-top:-5px;
   padding:1.1rem 0;
@@ -367,7 +356,7 @@ body{
   border-top: 1px solid rgba(255,255,255,0.02);
 }
 
-/* Reveal animation */
+
 .reveal{
   opacity:0;
   transform: translateY(18px) scale(0.995);
@@ -378,7 +367,7 @@ body{
   transform: none;
 }
 
-/* Responsive */
+
 @media (max-width:900px){
   .about-grid{ grid-template-columns: 1fr; }
   .profile-pic{ border-radius:12px; max-width:380px; margin:0 auto; }
@@ -394,14 +383,14 @@ body{
   .main-nav ul {
     gap: 0.4rem;
     justify-content: center;
-    flex-wrap: wrap; /* Allow nav to wrap */
+    flex-wrap: wrap; 
   }
   .projects-grid {
-    grid-template-columns: 1fr; /* Stack projects on small screens */
+    grid-template-columns: 1fr; 
   }
 }
 
-/* Respect reduced motion */
+
 @media (prefers-reduced-motion: reduce){
   *{ transition:none !important; animation:none !important; }
 }
