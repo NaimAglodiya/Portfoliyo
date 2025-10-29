@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -78,7 +79,9 @@
       <div class="card glass contact-card">
         <h2>Contact Me</h2>
 
-        <form id="contact-form" novalidate>
+        <form id="contact-form" name="contact" method="POST">
+          <input type="hidden" name="form-name" value="contact" />
+  
           <div class="field">
             <input id="name" name="name" type="text" required placeholder=" " />
             <label for="name">Name</label>
@@ -99,6 +102,7 @@
             <p id="form-status" class="form-status" aria-live="polite"></p>
           </div>
         </form>
+
 
       </div>
     </section>

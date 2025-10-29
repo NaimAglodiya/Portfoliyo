@@ -24,45 +24,38 @@ document.getElementById('year').textContent = new Date().getFullYear();
 })();
 
 // Contact form behavior (client-only demo)
-(function contactFormDemo(){
-  const form = document.getElementById('contact-form');
-  const status = document.getElementById('form-status');
+(function(){
+  emailjs.init("ZFHQsdQ_0wjxiPi8e");
+})();
 
-  // Helper: basic email check
-  function isValidEmail(email){
-    return /\S+@\S+\.\S+/.test(email);
+const form = document.getElementById('contact-form');
+const status = document.getElementById('form-status');
+
+form.addEventListener('submit', function(e){
+  e.preventDefault();
+
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const message = document.getElementById('message').value.trim();
+
+  if(!name || !email || !message){
+    status.textContent = "Please complete all fields.";
+    status.style.color = "#ff6b6b";
+    return;
   }
 
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    
-    // DEMO ONLY: This function provides client-side validation.
-    // It does not actually send an email. You need a backend service for that.
-
-    const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const message = document.getElementById('message').value.trim();
-
-    if (!name || !email || !message) {
-      status.textContent = "Please complete all fields.";
-      status.style.color = '#ff6b6b';
-      return;
-    }
-
-    if (!isValidEmail(email)) {
-      status.textContent = "Please enter a valid email address.";
-      status.style.color = '#ff6b6b';
-      return;
-    }
-
-    // Success (demo only — no backend)
+  emailjs.send("service_gbqyh25", "template_m6nccdt", {
+    from_name: name,
+    reply_to: email,
+    message: message
+  })
+  .then(() => {
     status.textContent = `Thanks, ${name}! Your message has been sent.`;
-    status.style.color = '#7bffdb';
+    status.style.color = "#7bffdb";
     form.reset();
-
-    // small visual feedback then clear
-    setTimeout(() => {
-      status.textContent = '';
-    }, 5000);
-  }, {passive: false});
-})();
+  }, (error) => {
+    status.textContent = "Oops! Something went wrong.";
+    status.style.color = "red";
+    console.error(error);
+  });
+});
